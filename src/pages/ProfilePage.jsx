@@ -1,3 +1,4 @@
+import withAuth from "../hoc/withAuth"
 
 function ProfilePage(){
     return(
@@ -7,4 +8,4 @@ function ProfilePage(){
     )
 }
 
-export default ProfilePage
+export default withAuth(ProfilePage)

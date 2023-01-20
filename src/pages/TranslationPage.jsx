@@ -1,4 +1,5 @@
 import TranslationForm from "../components/Translation/TranslationForm"
+import withAuth from "../hoc/withAuth"
 
 function TranslationPage(){
     return(
@@ -9,4 +10,4 @@ function TranslationPage(){
     )
 }
 
-export default TranslationPage
+export default withAuth(TranslationPage)

@@ -1,4 +1,3 @@
-import withAuth from "../components/Shared/withAuth"
 import TranslationForm from "../components/Translation/TranslationForm"
 
 function TranslationPage(){
@@ -10,4 +9,4 @@ function TranslationPage(){
     )
 }
 
-export default withAuth(TranslationPage)
+export default TranslationPage

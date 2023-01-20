@@ -1,4 +1,3 @@
-import withAuth from "../components/Shared/withAuth"
 
 function ProfilePage(){
     return(
@@ -8,4 +7,4 @@ function ProfilePage(){
     )
 }
 
-export default withAuth(ProfilePage)
+export default ProfilePage

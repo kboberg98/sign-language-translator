@@ -4,7 +4,7 @@ import ProfilePage from '../pages/ProfilePage';
 import TranslationPage from '../pages/TranslationPage';
 import MainNavigation from '../components/Shared/MainNavigation';
 
-function Routing(){
+const Routing = () => {
     return(
         <BrowserRouter>
             <MainNavigation></MainNavigation>

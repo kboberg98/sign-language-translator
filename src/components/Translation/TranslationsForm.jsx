@@ -17,9 +17,6 @@ const TranslationsForm = ({ onTranslation }) => {
                 </fieldset>
                 <button type="submit">Translate</button>
             </form>
-            <section>
-                
-            </section>
         </>
     )
 }

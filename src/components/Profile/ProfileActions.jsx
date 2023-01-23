@@ -15,7 +15,7 @@ const ProfileActions = () => {
     }
 
     const handleClearHistoryClick = async () => {
-        if (window.confirm('Are you sure?\nThis can not be undone!')) {
+        if (!window.confirm('Are you sure?\nThis can not be undone!')) {
             return
         }
 
@@ -30,7 +30,7 @@ const ProfileActions = () => {
             translations: []
         }
         
-        storageSave( updatedUser)
+        storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
     }
 

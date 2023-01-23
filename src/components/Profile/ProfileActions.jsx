@@ -36,10 +36,8 @@ const ProfileActions = () => {
 
     return (
         <ul>
-            <li>
-                <li><button onClick={ handleClearHistoryClick }>Clear history</button></li>
-                <li><button onClick={ handleLogoutClick }>Logout</button></li>
-            </li>
+            <li><button onClick={ handleClearHistoryClick }>Clear history</button></li>
+            <li><button onClick={ handleLogoutClick }>Logout</button></li>
         </ul>
     )
 }

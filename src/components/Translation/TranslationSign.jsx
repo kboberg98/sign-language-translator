@@ -1,6 +1,6 @@
 const TranslationSign = ({letter, image }) => {
     return (
-        <div>
+        <div className="translation-sign">
             <aside>
                 <img src={ image } alt={ letter } width="55" />
             </aside>

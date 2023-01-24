@@ -77,18 +77,21 @@ const TranslationPage = () => {
     }
 
     return(
-        <>
-            <h1>Translation Page</h1>
-            <section id="translation-form">
+        <div id="translation-page">
+            <div id="translation-header">
                 <TranslationsForm onTranslation={ handleTranslationClick }/>
-            </section>
-            <section id="translation-section">
-                
-                {translatedText.map((text, index) => (
-                    <TranslationSign key={index} letter={text.letter} image={text.image}/>
-                ))}
-            </section>
-        </>
+            </div>
+            <div id="translation-bottom">
+                <div id="translated-text-container">
+                    {translatedText.map((text, index) => (
+                        <TranslationSign key={index} letter={text.letter} image={text.image}/>
+                    ))}
+                    <div id="translated-text-container-bottom">
+                        <span id="translation-span">Translation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

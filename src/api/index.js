@@ -6,7 +6,3 @@ export const createHeaders = () => {
         'Content-Type': 'application/json'
     }
 }
-
-export const handleResponse = () => {
-
-}

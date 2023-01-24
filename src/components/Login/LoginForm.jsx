@@ -5,6 +5,7 @@ import { storageSave } from '../../utils/storage';
 import { useUser } from '../../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 import { STORAGE_KEY_USER } from '../../const/storageKeys';
+import { Form, Button, InputGroup } from 'react-bootstrap';
 
 const userNameConfig = {
     required: true,
@@ -24,7 +25,7 @@ const LoginForm = () => {
     // Side Effects
     useEffect(() => {
         if(user !== null) {
-            navigate('/profile')
+            navigate('/translation')
         }
     }, [ user, navigate ]) // Empty Deps - Only runs 1ce
     // Event Handlers
@@ -60,23 +61,22 @@ const LoginForm = () => {
     })()
 
     return (
-        <>
-            <h2>What's your name?</h2>
-            <form action="" onSubmit={ handleSubmit(onSubmit) }>
-                <fieldset>
-                    <label htmlFor="username">Username</label>
-                    <input 
+        <div id='login-form-container'>
+            <form id='login-form' action="" onSubmit={ handleSubmit(onSubmit) }>
+                <InputGroup>
+                    
+                    <Form.Control 
                         type="text" 
-                        placeholder='johndoe' 
+                        placeholder='Whats your name?' 
                         { ...register("username", userNameConfig) } 
                     />
-                    <button type='submit' disabled={ loading }>Continue</button>
-                </fieldset>
+                    <Button type='submit' variant='outline-secondary' disabled={ loading }>Continue</Button>
+                </InputGroup>
                 { errorMessage }
                 { loading && <p>Logging in...</p>}
                 { apiError && <p>{ apiError }</p>}
             </form>
-        </>
+        </div>
     )
 }
 

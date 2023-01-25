@@ -9,13 +9,13 @@
 }
 
 .header-text {
-  color: white;
+  color: #EFEFEF;
   font-family: 'Love Ya Like A Sister';
 }
 
 p, span, li {
   font-family: 'Sanchez', cursive;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #login-page {
@@ -49,7 +49,7 @@ p, span, li {
 
 #login-form-container {
   position: absolute;
-  height: 12.5%;
+  height: 25%;
   width: 40%;
   z-index: 1;
 }
@@ -98,7 +98,7 @@ p, span, li {
 #translation-page {
   position: absolute;
   width: 100%;
-  height: 90%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,9 +121,9 @@ p, span, li {
   display: grid;
   place-items: center;
   width: 100%;
-  height: 60%;
+  height: 80%;
   background-color: white;
-  bottom: 20%;
+  top: 20%;
 }
 
 #translated-text-container {
@@ -131,7 +131,7 @@ p, span, li {
   border-radius: 10px;
   box-shadow: 0 0 8px 0px rgb(59, 59, 59);
   width: 60%;
-  height: 80%;
+  height: 90%;
 }
 
 #translated-signs {
@@ -186,7 +186,7 @@ p, span, li {
 #profile-page {
   position: absolute;
   width: 100%;
-  height: 90%;
+  height: 80%;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -208,9 +208,9 @@ p, span, li {
   display: grid;
   place-items: center;
   width: 100%;
-  height: 60%;
+  height: 80%;
   background-color: white;
-  bottom: 20%;
+  top: 20%;
 }
 
 #profile-history-container {
@@ -218,11 +218,12 @@ p, span, li {
   border-radius: 10px;
   box-shadow: 0 0 8px 0px rgb(59, 59, 59);
   width: 60%;
-  height: 80%;
+  height: 90%;
 }
 
 #profile-history-list {
-  
+  overflow: auto;
+  max-height: 85%;
 }
 
 .history-item {
@@ -234,7 +235,7 @@ p, span, li {
   display: flex;
   justify-content: center;
   width: 100%;
-  bottom: 20%;
+  top: 97%;
 }
 
 .profile-btn {
@@ -261,4 +262,12 @@ p, span, li {
   padding-left: 10px;
   padding-right: 10px;
   margin-left: 20px;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 2px;
+  background-color: #969696;
 }

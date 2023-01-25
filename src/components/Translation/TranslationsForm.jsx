@@ -12,9 +12,9 @@ const TranslationsForm = ({ onTranslation }) => {
     return (
         <div id="translation-form-container">
             <form id="translation-form" onSubmit={ handleSubmit(onSubmit) }>
-                <InputGroup>
-                    <Form.Control type="text" { ...register('translationInput')} placeholder="React is fun" />
-                    <Button type="submit">Translate</Button>
+                <InputGroup id="translation-group">
+                    <Form.Control id="translation-input" type="text" { ...register('translationInput')} placeholder="React is fun" />
+                    <Button id="translation-btn" type="submit">Translate</Button>
                 </InputGroup>
             </form>
         </div>

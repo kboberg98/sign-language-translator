@@ -65,17 +65,21 @@ const LoginForm = () => {
             <form id='login-form' action="" onSubmit={ handleSubmit(onSubmit) }>
                 <InputGroup>
                     
-                    <Form.Control 
+                    <Form.Control
+                        id='login-input' 
                         type="text" 
                         placeholder='Whats your name?' 
                         { ...register("username", userNameConfig) } 
                     />
-                    <Button type='submit' variant='outline-secondary' disabled={ loading }>Continue</Button>
+                    <Button id='login-btn' type='submit' variant='outline-secondary' disabled={ loading }>Continue</Button>
                 </InputGroup>
                 { errorMessage }
                 { loading && <p>Logging in...</p>}
                 { apiError && <p>{ apiError }</p>}
             </form>
+            <div id='login-form-bottom'>
+
+            </div>
         </div>
     )
 }

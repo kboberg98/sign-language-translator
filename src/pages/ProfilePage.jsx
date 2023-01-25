@@ -26,11 +26,10 @@ function ProfilePage(){
     }, [setUser, user.id])
 
     return(
-        <div>
-            <h1>Profile Page</h1>
+        <div id="profile-page">
             <ProfileHeader username={ user.username } />
-            <ProfileActions />
             <ProfileTranslationHistory translations={ user.translations }/>
+            <ProfileActions />
         </div>
     )
 }

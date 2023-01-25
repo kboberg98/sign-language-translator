@@ -10,7 +10,7 @@ const MainNavigation = () => {
         <>
             <Navbar id="navbar">
                 <Container style={{textAlign: "center", alignContent: "center"}}>
-                    <Navbar.Brand id="navbar-brand"><h3>Lost on Translation</h3></Navbar.Brand>
+                    <Navbar.Brand id="navbar-brand"><h3>Lost in Translation</h3></Navbar.Brand>
                     { user !== null &&
                         <Nav id="navbar-nav">
                             <Nav.Link as={Link} to="/translation"><h5>Translation</h5></Nav.Link>

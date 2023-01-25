@@ -13,7 +13,7 @@ const TranslationsForm = ({ onTranslation }) => {
         <div id="translation-form-container">
             <form id="translation-form" onSubmit={ handleSubmit(onSubmit) }>
                 <InputGroup id="translation-group">
-                    <Form.Control id="translation-input" type="text" { ...register('translationInput')} placeholder="React is fun" />
+                    <Form.Control id="translation-input" type="text" maxLength={40} { ...register('translationInput')} placeholder="React is fun" />
                     <Button id="translation-btn" type="submit">Translate</Button>
                 </InputGroup>
             </form>

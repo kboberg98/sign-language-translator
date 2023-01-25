@@ -69,6 +69,9 @@ const TranslationPage = () => {
             if(sign){
                 tempArray.push(sign)
             }
+            if(!sign){
+                tempArray.push(" ")
+            }
             setTranslatedText(tempArray);
         }
         
@@ -83,9 +86,11 @@ const TranslationPage = () => {
             </div>
             <div id="translation-bottom">
                 <div id="translated-text-container">
-                    {translatedText.map((text, index) => (
-                        <TranslationSign key={index} letter={text.letter} image={text.image}/>
-                    ))}
+                    <div id="translated-signs">
+                        {translatedText.map((text, index) => (
+                            <TranslationSign key={index} letter={text.letter} image={text.image}/>
+                        ))}
+                    </div>
                     <div id="translated-text-container-bottom">
                         <span id="translation-span">Translation</span>
                     </div>

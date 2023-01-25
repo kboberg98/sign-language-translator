@@ -182,7 +182,6 @@
 
 #translation-input {
   padding: 0.8rem;
-  color: #EFEFEF;
 }
 
 #translation-btn {
@@ -233,7 +232,7 @@
 #profile-btn-container {
   position: absolute;
   display: flex;
-  place-items: center;
+  justify-content: center;
   width: 100%;
   bottom: 20%;
 }

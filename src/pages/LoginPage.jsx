@@ -5,8 +5,8 @@ function LoginPage(){
         <div id="login-page">
             <div id="login-header">
                 <div id='login-header-text'>
-                    <h1>Lost in Translation</h1>
-                    <h2>Get started</h2>
+                    <h1 className="header-text">Lost in Translation</h1>
+                    <h2 className="header-text">Get started</h2>
                 </div>
             </div>
             <LoginForm></LoginForm>

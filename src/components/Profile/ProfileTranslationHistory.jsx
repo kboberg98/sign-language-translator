@@ -12,6 +12,7 @@ const ProfileTranslationHistory = ({ translations }) => {
                 <ul>
                     { translationList }
                 </ul>
+                <div id="profile-history-container-bottom"><span id="history-span">History</span></div>
             </div>
         </section>
     )

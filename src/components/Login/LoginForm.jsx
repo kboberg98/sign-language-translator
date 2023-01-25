@@ -63,8 +63,7 @@ const LoginForm = () => {
     return (
         <div id='login-form-container'>
             <form id='login-form' action="" onSubmit={ handleSubmit(onSubmit) }>
-                <InputGroup>
-                    
+                <InputGroup id='login-group'>
                     <Form.Control
                         id='login-input' 
                         type="text" 
@@ -73,12 +72,14 @@ const LoginForm = () => {
                     />
                     <Button id='login-btn' type='submit' variant='outline-secondary' disabled={ loading }>Continue</Button>
                 </InputGroup>
-                { errorMessage }
-                { loading && <p>Logging in...</p>}
-                { apiError && <p>{ apiError }</p>}
+                
             </form>
             <div id='login-form-bottom'>
-
+                <div id='login-form-errors'>
+                    { errorMessage }
+                    { loading && <p>Logging in...</p>}
+                    { apiError && <p>{ apiError }</p>}
+                </div>
             </div>
         </div>
     )

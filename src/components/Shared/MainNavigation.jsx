@@ -9,12 +9,12 @@ const MainNavigation = () => {
     return(
         <>
             <Navbar id="navbar">
-                <Container style={{textAlign: "center", alignContent: "center"}}>
-                    <Navbar.Brand id="navbar-brand"><h3>Lost in Translation</h3></Navbar.Brand>
+                <Container>
+                    <Navbar.Brand id="navbar-brand"><h3 className="header-text">Lost in Translation</h3></Navbar.Brand>
                     { user !== null &&
                         <Nav id="navbar-nav">
-                            <Nav.Link as={Link} to="/translation"><h5>Translation</h5></Nav.Link>
-                            <Nav.Link as={Link} to="/profile"><h5>Profile</h5></Nav.Link>
+                            <Nav.Link as={Link} to="/translation"><h5 className="header-text">Translation</h5></Nav.Link>
+                            <Nav.Link as={Link} to="/profile"><h5 className="header-text">Profile</h5></Nav.Link>
                         </Nav>
                     }
                 </Container>

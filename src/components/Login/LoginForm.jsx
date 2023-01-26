@@ -77,8 +77,8 @@ const LoginForm = () => {
             <div id='login-form-bottom'>
                 <div id='login-form-errors'>
                     { errorMessage }
-                    { loading && <p>Logging in...</p>}
-                    { apiError && <p>{ apiError }</p>}
+                    { loading && <span>Logging in...</span>}
+                    { apiError && <span>{ apiError }</span>}
                 </div>
             </div>
         </div>

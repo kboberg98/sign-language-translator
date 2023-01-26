@@ -159,10 +159,6 @@ p, span, li {
   padding: 1rem;
 }
 
-.translation-sign {
-  
-}
-
 #translated-text-container-bottom {
   position: absolute;
   bottom: 0;
@@ -219,7 +215,10 @@ p, span, li {
   height: 20%;
   background-color: #FFC75F;
   top: 0;
-  
+}
+
+#profile-header-username {
+  margin: 0;
 }
 
 #profile-history {

@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Name and Description
+
+This project is called "Sign Language Translator" and it is a react application that translate english text to sign language.
+
+## Installation instructions
+
+The user should have node.js and npm installed on their machine. Then then user should clone the repository and run `npm install` in the root of the cloned repository to install all dependencies.
+
 ## Available Scripts
 
 In the project directory, you can run:

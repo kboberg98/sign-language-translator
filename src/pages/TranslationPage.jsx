@@ -70,7 +70,7 @@ const TranslationPage = () => {
                 tempArray.push(sign)
             }
             if(!sign){
-                tempArray.push(" ")
+                tempArray.push("")
             }
             setTranslatedText(tempArray);
         }

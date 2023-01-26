@@ -9,8 +9,13 @@ const MainNavigation = () => {
     return(
         <>
             <Navbar id="navbar">
-                <Container>
-                    <Navbar.Brand id="navbar-brand"><h3 className="header-text">Lost in Translation</h3></Navbar.Brand>
+                <Container id="navbar-container">
+                    <Navbar.Brand id="navbar-brand">
+                        { user !== null &&
+                            <img id="navbar-logo" src="img/Logo.png" alt="navbar-logo" width='55'/>
+                        }
+                        <h3 id="navbar-logo-text" className="header-text">Lost in Translation</h3>
+                    </Navbar.Brand>
                     { user !== null &&
                         <Nav id="navbar-nav">
                             <Nav.Link as={Link} to="/translation"><h5 className="header-text">Translation</h5></Nav.Link>

@@ -4,12 +4,27 @@
 #navbar {
   background-color: #FFC75F;
   border-bottom: 7px solid #E7B355;
+}
+
+#navbar-logo-text {
+  margin-top: 1rem;
+}
+
+#navbar-nav {
+  margin-top: 1rem;
+}
+
+#navbar-brand {
   display: flex;
-  padding-top: 1rem;
+  align-items: center;
+}
+
+#navbar-logo {
+  margin-right: 1rem;
 }
 
 .header-text {
-  color: #EFEFEF;
+  color: white;
   font-family: 'Love Ya Like A Sister';
 }
 
@@ -21,7 +36,7 @@ p, span, li {
 #login-page {
   position: absolute;
   width: 100%;
-  height: 90%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,13 +45,17 @@ p, span, li {
 
 #login-header {
   position: absolute;
-  display: grid;
+  display: flex;
   place-items: center;
+  justify-content: center;
   width: 100%; 
   height: 50%;
   background-color: #FFC75F;
   top: 0;
-  
+}
+
+#login-header-img {
+  margin-right: 1rem;
 }
 
 #login-bottom {
@@ -239,7 +258,7 @@ p, span, li {
 }
 
 .profile-btn {
-  padding: 0.8rem;
+  padding: 0.5rem;
   margin-right: 1rem;
   color: white;
 }
@@ -269,5 +288,5 @@ hr {
   padding: 0;
   width: 30%;
   height: 2px;
-  background-color: #969696;
+  background-color: #E7B355;
 }

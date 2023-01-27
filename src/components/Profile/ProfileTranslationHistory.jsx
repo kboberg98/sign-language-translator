@@ -2,9 +2,11 @@ import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 
 const ProfileTranslationHistory = ({ translations }) => {
     
+    // Storing mapped translations in a list
     const translationList = translations.map(
         (translation, index) => <ProfileTranslationHistoryItem key={ index + '-' + translation } translation={ translation } />)
 
+    // Storing the 10 last translations in a  new list
     const lastTenTranslations = translationList.slice(-10);
 
     return (

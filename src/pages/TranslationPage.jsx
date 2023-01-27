@@ -8,9 +8,12 @@
     import { storageSave } from "../utils/storage"
 
     const TranslationPage = () => {
+
+        // Hooks
         const { user, setUser } = useUser()
         const [ translatedText, setTranslatedText ] = useState([])
 
+        // array of signs and their corresponding images
         const SIGNS = [
             {letter: 'a', image: 'img/a.png'},
             {letter: 'b', image: 'img/b.png'},
@@ -41,20 +44,23 @@
             {letter: ' ', image: 'img/white.png'}
         ];
 
+        // function to handle the translation of text
         const handleTranslationClick = async translation => {
+            // check if translation is not empty
             if(!translation) {
                 alert('Please enter text first.')
                 return
             }
 
+            // check if user exists
             if(!user || !user.translations) {
                 alert('User not found.')
                 return
             }
 
+            // call the translationAdd function from the api
             const [error, updatedUser] = await translationAdd(user, translation)
             if (error !== null) {
-                // Bad
                 return
             }
 
@@ -63,6 +69,7 @@
             // Update Context state.
             setUser(updatedUser)
 
+             // loop through translation and find corresponding sign
             let tempArray = [];
             for(let i = 0; i < translation.length; i++){
                 let letter = translation[i].toLowerCase()
@@ -72,6 +79,7 @@
                 }
             }
 
+            // update translatedText state
             setTranslatedText(tempArray);
             
             console.log('Error', error);

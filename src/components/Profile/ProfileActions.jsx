@@ -8,6 +8,7 @@ const ProfileActions = () => {
 
     const { user, setUser } = useUser()
 
+    // Deleting user from storage and setting user to null if user confirm logout
     const handleLogoutClick = () => {
         if (window.confirm('Are you sure?')) {
             storageDelete(STORAGE_KEY_USER)
@@ -15,11 +16,13 @@ const ProfileActions = () => {
         }
     }
 
+    // Clearing translation history for user on confirm, and updating user to storage and context
     const handleClearHistoryClick = async () => {
         if (!window.confirm('Are you sure?\nThis can not be undone!')) {
             return
         }
 
+        // call the translationClearHistory function from api
         const [ clearError ] = await translationClearHistory(user.id)
         
         if (clearError !== null) {

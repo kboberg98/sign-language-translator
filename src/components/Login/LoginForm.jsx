@@ -15,20 +15,19 @@ const userNameConfig = {
 const LoginForm = () => {
     // Hooks
     const { register, handleSubmit, formState: { errors }} = useForm()
-    const { user, setUser} = useUser()
-    const navigate = useNavigate()
+    const { user, setUser} = useUser() // useUser hook to get and set the user context
+    const navigate = useNavigate() // useNavigate hook to navigate between routes
 
     // Local State
-    const [ loading, setLoading ] = useState(false)
-    const [ apiError, setApiError ] = useState(null)
+    const [ loading, setLoading ] = useState(false) // state to handle the loading state of the form
+    const [ apiError, setApiError ] = useState(null) // state to handle errors from the API
 
     // Side Effects
     useEffect(() => {
         if(user !== null) {
             navigate('/translation')
         }
-    }, [ user, navigate ]) // Empty Deps - Only runs 1ce
-    // Event Handlers
+    }, [ user, navigate ]) // Empty Deps - Only runs once
 
     // Render Functions
     const onSubmit = async ({ username }) => {
@@ -41,8 +40,6 @@ const LoginForm = () => {
             storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
-        //console.log('Error: ', error)
-        //console.log('User: ', user)
         setLoading(false);
     };
 
